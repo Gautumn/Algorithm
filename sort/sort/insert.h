@@ -144,6 +144,11 @@ template <typename Iter>
 void insertSort(Iter begin, Iter end) {
     insertSortBinary(begin, end, std::less<decltype(*begin)>());
 }
+
+template <typename Iter, typename Comp>
+void insertSort(Iter begin, Iter end, Comp comp) {
+    insertSortBinary(begin, end, comp);
+}
 /// @}
 
 /// Ï£¶ûÅÅĞò

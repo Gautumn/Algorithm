@@ -8,7 +8,7 @@
 
 #include "help.h"
 #include "insert.h"
-
+#include "practise.h"
 
 
 
@@ -46,6 +46,10 @@ int main()
         std::cout << "shellTest1 failed \n";
     }
 
+    std::vector<double> shellTest2;
+    frandom(shellTest2, 10);
+    shellSort(shellTest2.begin(), shellTest2.end());
+
     auto ub1 = upperBound(insertTest1.begin(), insertTest1.end(), 5);
     if (ub1 != insertTest1.end())
         std::cout << "ub1: " << *ub1 << std::endl;
@@ -54,6 +58,7 @@ int main()
     if (lb1 != insertTest1.end())
         std::cout << "lb1: " << *lb1 << std::endl;
 
+    practise_2_1_12();
 
     std::cout << "Hello World!\n";
 
