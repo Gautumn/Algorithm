@@ -42,8 +42,8 @@ void practise_2_1_12() {
     getShellCompCount(10000, count);
     std::cout << "size: " << 10000 << " compare: " << fcompCount << '\n'; // 233224
     // 1000000¸ö
-    getShellCompCount(1000000, count);
-    std::cout << "size: " << 1000000 << " compare: " << fcompCount << '\n'; // 64505994
+    // getShellCompCount(1000000, count);
+    // std::cout << "size: " << 1000000 << " compare: " << fcompCount << '\n'; // 64505994
 
     // 100000000¸ö(1ÒÚ£©
     // getShellCompCount(100000000, count);

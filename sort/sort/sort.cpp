@@ -7,6 +7,7 @@
 #include <vector>
 
 #include "help.h"
+#include "merge.h"
 #include "insert.h"
 #include "practise.h"
 
@@ -46,6 +47,17 @@ int main()
         std::cout << "shellTest1 failed \n";
     }
 
+
+    std::vector<int> mergeTest1{ 2, 3, 34, 1, 4, 32, 4 };
+    mergeSort(mergeTest1);
+    showSorted(mergeTest1.begin(), mergeTest1.end());
+    if (isSorted(mergeTest1.begin(), mergeTest1.end())) {
+        std::cout << "mergeTest1 passed \n";
+    } else {
+        std::cout << "mergeTest1 failed \n";
+    }
+
+
     std::vector<double> shellTest2;
     frandom(shellTest2, 10);
     shellSort(shellTest2.begin(), shellTest2.end());
@@ -59,6 +71,9 @@ int main()
         std::cout << "lb1: " << *lb1 << std::endl;
 
     practise_2_1_12();
+
+
+
 
     std::cout << "Hello World!\n";
 

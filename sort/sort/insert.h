@@ -177,6 +177,6 @@ void shellSort(Iter begin, Iter end) {
     shellSort(begin, end, std::less<decltype(*begin)>());
 }
 
-
-
 /// @}
+
+

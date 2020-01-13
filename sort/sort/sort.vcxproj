@@ -155,6 +155,8 @@
     <ClInclude Include="insert.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="practise.h" />
+    <ClInclude Include="quick.h" />
+    <ClInclude Include="merge.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
