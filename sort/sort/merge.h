@@ -59,11 +59,9 @@ void mergeSort(std::vector<T> &v) {
 /// 算法改进1: 对于小规模子数组使用插入排序
 template <typename T, typename Comp>
 void mergeSort1(std::vector<T> &v, std::vector<T> &tmp, size_t l, size_t r, const Comp &comp) {
-    if (l >= r) return;
-    // 小于16的采用插入排序
-    // if（r - l < 16) {
-    //    insertSort(v, l, r);
-    // }
+    /// 当相差16的时候进入插入排序
+    if (r <= l + 16) { return insertSort(v, l, r); }
+
     size_t mid = l + (r - l) / 2;
     mergeSort(v, tmp, l, mid, comp);
     mergeSort(v, tmp, mid + 1, r, comp);
@@ -107,11 +105,11 @@ void mergeSort3(std::vector<T> &src, std::vector<T> &dst, size_t l, size_t r, co
 template <typename T, typename Comp>
 void mergeSort3(std::vector<T> &dst, const Comp &comp) {
     std::vector<T> src(dst);
-    mergeSort(src, dst, 0, dst.size() - 1, comp);
+    mergeSort3(src, dst, 0, dst.size() - 1, comp);
 }
 
-template <typename T, typename Comp>
+template <typename T>
 void mergeSort3(std::vector<T> &dst) {
     std::vector<T> src(dst);
-    mergeSort(src, dst, 0, dst.size() - 1, std::less<T>());
+    mergeSort3(src, dst, 0, dst.size() - 1, std::less<T>());
 }

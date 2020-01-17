@@ -57,6 +57,14 @@ int main()
         std::cout << "mergeTest1 failed \n";
     }
 
+    std::vector<int> mergeTest2{ 2, 3, 34, 1, 4, 32, 4 };
+    mergeSort3(mergeTest2);
+    showSorted(mergeTest2.begin(), mergeTest2.end());
+    if (isSorted(mergeTest2.begin(), mergeTest2.end())) {
+        std::cout << "mergeTest2 passed \n";
+    } else {
+        std::cout << "mergeTest2 failed \n";
+    }
 
     std::vector<double> shellTest2;
     frandom(shellTest2, 10);
